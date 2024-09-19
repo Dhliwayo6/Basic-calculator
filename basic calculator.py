@@ -28,6 +28,7 @@ elif  operator == "*":
      print(f"The product is {product}")
 elif  operator == "/":
      quotient = divide(num1, num2)
-     print(f"The quotient is {quotient}")
+     if quotient != None:
+          print(f"The quotient is {quotient}")
 else:
      print("Invalid option")
