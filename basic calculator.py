@@ -37,13 +37,25 @@ def divide(a, b):
 allow the user to make calculations consecutively, 
 one after the other without having to re-run the program
 '''
+print('Welcome to a calculator program!')
+
 while True:
      #to handle for errors, the try and except blocks are 
      try:
-          num1 = float(input("Enter the first number: "))
-          operator = input("Select an operator +,-,*,/ or q to quit the program: ")
-          if operator == "q":
+          program = input('Type yes to continue or q to quit ').lower()
+          if program == "q":
                break
+          elif program == 'yes':
+               pass
+          else:
+               print('Not a valid option, try again')
+
+          num1 = float(input("Enter the first number: "))
+          operator = input("Select an operator +,-,*,/: ")
+          while operator not in '+-*/':
+               print('Invalid operator, type in +,-,*,/ ')
+               operator = input("Select an operator +,-,*,/: ")
+               
           num2 = float(input("Enter the second number: "))
 
           if operator == "+":
